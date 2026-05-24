@@ -4,7 +4,7 @@ gunicorn==21.2.0
 werkzeug==2.3.0
 
 # Image processing
-pillow==10.0.0
+pillow==10.4.0
 numpy==1.24.3
 
 # TensorFlow / Keras (MobileNetV2)
