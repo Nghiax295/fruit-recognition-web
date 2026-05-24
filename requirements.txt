@@ -1,7 +1,7 @@
 # Core
 flask==2.3.3
 gunicorn==21.2.0
-werkzeug==2.3.0
+werkzeug
 
 # Image processing
 pillow==10.4.0
