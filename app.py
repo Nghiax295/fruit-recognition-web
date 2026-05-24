@@ -360,5 +360,12 @@ def predict():
     os.remove(filepath)
     return jsonify({'prediction': result})
 
+# if __name__ == '__main__':
+#     app.run(debug=True, host='0.0.0.0', port=5000)
+
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Lấy cổng từ biến môi trường (Render sẽ cung cấp), mặc định 5000 cho local
+    port = int(os.environ.get('PORT', 5000))
+    # Tắt debug khi chạy production, bật khi cần debug local
+    debug_mode = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    app.run(debug=debug_mode, host='0.0.0.0', port=port)
