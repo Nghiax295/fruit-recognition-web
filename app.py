@@ -326,7 +326,7 @@ def predict_efficientnet(img):
         return CLASS_NAMES[predicted.item()]
 
 # Load models khi khởi động
-mobilenet_model = load_keras_model('models/mobilenetv2_fruit_final.keras', 'MobileNet')
+mobilenet_model = load_keras_model('models/mobilenetv2_fruit_best.keras', 'MobileNet')
 resnet_model = load_resnet34()
 efficientnet_model = load_efficientnet()
 
